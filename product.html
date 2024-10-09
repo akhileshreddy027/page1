@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <style>
+        body {
+            font-family: 'Clash Display';
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f5f5f5;
+        }
+        .container {
+            display: flex;
+            padding: 20px;
+        }
+
+        .left-section {
+            flex: 1;
+        }
+        .main-image{
+            width: 90%;
+            height: 80vh;
+        }
+        .main-image img {
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            border-radius: 30px;
+        }
+
+        .thumbnails {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .thumbnails img {
+            width: 80px;
+            height: auto;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+
+        .right-section {
+            flex: 1;
+            margin-left: 50px;
+        }
+
+        .right-section h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .price {
+            font-size: 1.5rem;
+            color: red;
+        }
+
+        .size-options {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .size-options button {
+            padding: 10px;
+            border: 1px solid black;
+            cursor: pointer;
+            background-color: white;
+        }
+
+        .add-to-cart {
+            margin-top: 20px;
+        }
+
+        .add-to-cart button {
+            padding: 15px;
+            background-color: black;
+            color: white;
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+        }
+
+        .description, .details, .care-instructions {
+            margin-top: 30px;
+        }
+
+        .icons {
+            display: flex;
+            gap: 20px;
+            margin-top: 50px;
+        }
+
+        .icon {
+            text-align: center;
+        }
+
+        .icon img {
+            width: 50px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Left Section (Images) -->
+    <div class="left-section">
+        <div class="main-image">
+            <img src="LocalsOnlyBlackWebsiteBack.png" alt="Product Image" id="mainImage">
+        </div>
+        <div class="thumbnails">
+            <img src="LocalsOnlyBlackWebsiteFront.png" alt="Thumbnail 1" onclick="changeImage('LocalsOnlyBlackWebsiteFront.png')">
+            <img src="LocalsOnlyWhiteWebsiteFront.png" alt="Thumbnail 2" onclick="changeImage('LocalsOnlyWhiteWebsiteFront.png')">
+            <img src="LocalsOnlyWhiteWebsiteBack.png" alt="Thumbnail 2" onclick="changeImage('LocalsOnlyWhiteWebsiteBack.png')">
+        </div>
+    </div>
+
+    <!-- Right Section (Product Details) -->
+    <div class="right-section">
+        <h1>SELL YOUR SOUL Oversized T-Shirt</h1>
+        <p class="price">₹899.00 <span style="text-decoration: line-through; color: grey;">₹999.00</span> <span style="color: red;">Sale</span></p>
+        <p>Size</p>
+        <div class="size-options">
+            <button>XS</button>
+            <button>S</button>
+            <button>M</button>
+            <button>L</button>
+            <button>XL</button>
+            <button>XXL</button>
+        </div>
+
+        <div class="add-to-cart">
+            <button>Add to cart</button>
+        </div>
+
+        <!-- Description -->
+        <div class="description">
+            <h2>Description</h2>
+            <p>Sell Your Soul Oversized T-Shirt for the souls of wild spirits and calm minds.</p>
+            <p>Back: A graphical presentation of wild and universal elements with text: Sell Your Soul, Sign here...</p>
+        </div>
+
+        <!-- Details Section (If needed) -->
+        <div class="details">
+            <h2>Details</h2>
+            <p>Material: Cotton</p>
+        </div>
+
+        <!-- Care Instructions Section -->
+        <div class="care-instructions">
+            <h2>Care Instructions</h2>
+            <p>Machine wash, Cold water.</p>
+        </div>
+
+        <!-- Icons Section -->
+        <div class="icons">
+            <div class="icon">
+                <img src="cash.png" alt="COD Available">
+                <p>COD Available</p>
+            </div>
+            <div class="icon">
+                <img src="delivery.png" alt="Delivery 4-6 Days">
+                <p>Delivery in 4-6 Days</p>
+            </div>
+            <div class="icon">
+                <img src="exchage.png" alt="Easy Exchange">
+                <p>Easy Exchange</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function changeImage(imagePath) {
+        document.getElementById('mainImage').src = imagePath;
+    }
+</script>
+
+</body>
+</html>
